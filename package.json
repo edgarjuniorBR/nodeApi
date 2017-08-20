@@ -1,28 +1,30 @@
 {
-    "name": "nodeApi",
-    "version": "1.0.0",
-    "description": "Node API Sample",
-    "main": "index.js",
-    "scripts": {
-        "start": "nodemon ./bin/server.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/edgarjuniorBR/nodeApi.git"
-    },
-    "keywords": [],
-    "author": "Edgar Junior",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/edgarjuniorBR/nodeApi/issues"
-    },
-    "homepage": "https://github.com/edgarjuniorBR/nodeApi#readme",
-    "dependencies": {
-        "debug": "^3.0.0",
-        "express": "^4.15.4",
-        "http": "0.0.0"
-    },
-    "devDependencies": {
-        "nodemon": "^1.11.0"
-    }
+  "name": "nodeApi",
+  "version": "1.0.0",
+  "description": "Node API Sample",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgarjuniorBR/nodeApi.git"
+  },
+  "keywords": [],
+  "author": "Edgar Junior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edgarjuniorBR/nodeApi/issues"
+  },
+  "homepage": "https://github.com/edgarjuniorBR/nodeApi#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "debug": "^3.0.0",
+    "express": "^4.15.4",
+    "http": "0.0.0",
+    "mongoose": "^4.11.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }

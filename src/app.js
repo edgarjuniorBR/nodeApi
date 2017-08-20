@@ -1,45 +1,23 @@
 'use strict'
 
 const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = express();
 const router = express.Router();
 
-const route = router.get('/', (req, res, next) => {
-    res.status(200).send({
-        'title': 'Node Sample API',
-        'version': '0.0.1'
-    });
-});
+mongoose.connect('mongodb://edgar:edgar@ds145010.mlab.com:45010/sampleapi');
 
-const create = router.post('/', (req, res, next) => {
-    res.status(201).send({
-        'mensagem': 'criado'
-    });
-});
+const indexroute = require('../routes/index-route');
+const productsroute = require('../routes/products-route');
 
-const update = router.put('/:id', (req, res, next) => {
-    res.status(200).send({
-        'mensagem': 'alterado'
-    });
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-const del = router.delete('/:id', (req, res, next) => {
-    res.status(200).send({
-        'mensagem': 'excluido'
-    });
-});
 
-const read = router.get('/', (req, res, next) => {
-    res.status(200).send({
-        'mensagem': 'consultado'
-    });
-});
 
-app.use('/', route);
-app.use('/products', create);
-app.use('/products', update);
-app.use('/products', del);
-app.use('/products', read);
+app.use('/', indexroute);
+app.use('/products', productsroute);
 
 module.exports = app;
