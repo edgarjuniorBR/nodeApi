@@ -9,6 +9,8 @@ const router = express.Router();
 
 mongoose.connect('mongodb://edgar:edgar@ds145010.mlab.com:45010/sampleapi');
 
+const Product = require('../models/product');
+
 const indexroute = require('../routes/index-route');
 const productsroute = require('../routes/products-route');
 
